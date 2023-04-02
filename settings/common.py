@@ -14,13 +14,14 @@ from datetime import timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 APPEND_SLASH = False
-ALLOWED_HOSTS = ["0.0.0.0", "localhost", "127.0.0.1", "192.168.1.239"]
+ALLOWED_HOSTS = ["*"]
 
 ADMINS = (
     ("Admin", "example@example.com"),
 )
 
 DEBUG = False
+DEBUGFILE = True
 
 DATABASES = {
     "default": {
@@ -187,7 +188,7 @@ LOCALE_PATHS = (
 
 SITES = {
     "api": {"domain": "localhost:8000", "scheme": "http", "name": "api"},
-    "front": {"domain": "192.168.1.239:9001", "scheme": "http", "name": "front"},
+    "front": {"domain": "localhost:9001", "scheme": "http", "name": "front"},
 }
 
 SITE_ID = "api"

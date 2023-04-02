@@ -52,7 +52,7 @@ if settings.FRONT_SITEMAP_ENABLED:
 # Static and media files in debug mode
 ##############################################
 
-if settings.DEBUG:
+if settings.DEBUGFILE:
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
     def mediafiles_urlpatterns(prefix):
